@@ -1,4 +1,4 @@
-##Bem-vindo(a) ao repositório do OrganizadorReceitaBX
+## Bem-vindo(a) ao repositório do OrganizadorReceitaBX
 Olá, eu sou Pedro, e este é mais um dos meus projetos pessoais onde compartilho soluções práticas para desafios do dia a dia. Ao navegar pela vasta rede, é possível encontrar inúmeros projetos interessantes, mas muitos deles carecem de aplicabilidade prática em situações reais.
 
 A proposta deste repositório é oferecer soluções para problemas que surgiram no meu cotidiano e que foram resolvidos por meio deste código. Cada projeto reflete uma experiência pessoal e uma abordagem prática para resolver desafios específicos.
@@ -8,7 +8,7 @@ Em vez de simplesmente buscar projetos por sua complexidade ou inovação, conce
 
 A ideia para esse projeto surgiu quando vi o tempo que demandava para organizar os arquivos SPED baixados do programa da Receita Federal. Antes do OrganizadorReceitaBX era necessário que os arquivos fossem baixados e organizados uma categoria por vez, para evitar que se misturassem. Após a implementação do software isso já não é mais necessário.
 
-##Como Usar Este Repositório
+## Como Usar Este Repositório
 
 Este repositório foi projetado com simplicidade em mente. Seguir estes passos simples permitirá que você aproveite as soluções apresentadas:
 
