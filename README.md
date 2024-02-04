@@ -3,7 +3,7 @@ Olá, eu sou Pedro, e este é mais um dos meus projetos pessoais onde compartilh
 
 A proposta deste repositório é oferecer soluções para problemas que surgiram no meu cotidiano e que foram resolvidos por meio deste código. Cada projeto reflete uma experiência pessoal e uma abordagem prática para resolver desafios específicos.
 
-**Motivação**
+## Motivação
 Em vez de simplesmente buscar projetos por sua complexidade ou inovação, concentro-me em questões reais que encontrei no meu caminho. Acredito que soluções simples e eficazes são valiosas e podem beneficiar outros desenvolvedores e entusiastas.
 
 A ideia para esse projeto surgiu quando vi o tempo que demandava para organizar os arquivos SPED baixados do programa da Receita Federal. Antes do OrganizadorReceitaBX era necessário que os arquivos fossem baixados e organizados uma categoria por vez, para evitar que se misturassem. Após a implementação do software isso já não é mais necessário.
