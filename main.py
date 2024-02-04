@@ -9,7 +9,7 @@ largura, altura = 530, 100
 layout = [
     [sg.Text(text=f'{' '*44}Organizador ReceitaNetBX', font='Roboto 12 bold', pad=7)],
     [sg.Text('Pasta c/ arquivos: ', font='Roboto 10'), sg.Input(key='-FOLDER-', enable_events=True), sg.FolderBrowse(f'Buscar', font=f'{fonte} 10', size=(14,1))
-    ,sg.Image(r'img.png', pad=((0,0),(0,0)))],
+    ,sg.Image(r'./img.png', pad=((0,0),(0,0)))],
     [],
     [sg.Text(text=f'{' '*65}Diretórios', font='Roboto 12 bold', pad=7)],
     [sg.Text(text='ESOCIAL'), sg.Checkbox(text='', key='-ESOCIAL-', default=True), sg.Text(text='SPED ECD'), sg.Checkbox(text='', key='-SPEDECD-', default=True),
