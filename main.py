@@ -5,17 +5,16 @@ from organizadorreceitabx import OrganizadorReceitaBX
 sg.theme('Default')
 fonte = 'Roboto'
 
-largura, altura = 530, 100
 layout = [
-    [sg.Text(text=f'{' '*33}Organizador ReceitaNetBX', font='Roboto 12 bold', pad=7)],
+    [sg.Text(text=f'{' '*50}Organizador ReceitaNetBX', font='Roboto 12 bold', pad=7)],
     [sg.Text('Pasta c/ arquivos: ', font='Roboto 10'), sg.Input(key='-FOLDER-', enable_events=True), sg.FolderBrowse(f'Buscar', font=f'{fonte} 10', size=(14,1))
-    ,sg.Image(r'./img.png', pad=((0,0),(0,0)))],
+    ,sg.Image(r'.\\.images\\img.png', pad=((0,0),(0,0)))],
     [],
-    [sg.Text(text=f'{' '*45}Diretórios', font='Roboto 12 bold', pad=7)],
+    [sg.Text(text=f'{' '*65}Diretórios', font='Roboto 12 bold', pad=7)],
     [sg.Text(text='ESOCIAL'), sg.Checkbox(text='', key='-ESOCIAL-', default=True), sg.Text(text='SPED ECD'), sg.Checkbox(text='', key='-SPEDECD-', default=True),
     sg.Text(text='SPED Contribuições'), sg.Checkbox(text='', key='-SPEDCONTRIBUICOES-', default=True), sg.Text(text='SPED ECF'), sg.Checkbox(text='', key='-SPEDECF-', default=True),
     sg.Text(text='SPED EFD'), sg.Checkbox(text='', key='-SPEDEFD-', default=True)],
-    [sg.Text(text=f'Versão 1.0{' '*110}Github: souza-pedro31', font=f'{fonte} 8 bold')]
+    [sg.Text(text=f'Versão 1.0{' '*142}Github: souza-pedro31', font=f'{fonte} 8 bold')]
     ]
 
 sg.popup_ok('Os seguintes diretórios serão criados:\n\n- ESOCIAL\n- SPED ECD\n- SPED Contribuições\n- SPED ECF\n- SPED EFD\n\n( Desmarque os que você não precisa )', title='Popup início', font=(f'{fonte} 12'))
