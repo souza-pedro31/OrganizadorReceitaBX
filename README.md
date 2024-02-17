@@ -19,7 +19,8 @@ Este repositório foi projetado com simplicidade em mente. Seguir estes passos s
 2. **Instale as Dependências:**
 
  - Antes de executar o script, certifique-se de instalar todas as dependências necessárias e o módulo autoral "organizadorreceitabx.py". Você pode fazer isso executando o seguinte comando no terminal:
-```pip freeze install requirements.txt
+```
+pip freeze install requirements.txt
 ```
 
 3. **Execute o Script:**
