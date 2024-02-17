@@ -89,10 +89,4 @@ class OrganizadorReceitaBX:
 
 
 if __name__ == '__main__':
-    caminho = str(input('Insira o caminho completo da pasta dos seus arquivos: '))
-    org = OrganizadorReceitaBX(caminho)
-    categorizar = org.categorizar_arquivos()
-    checagem_diretorios = org.checar_diretorios()
-    criacao_diretorios = org.criar_diretorios(*checagem_diretorios) 
-    org.organizar_arquivos()
-    registro_erros = org.registrar_erros() 
+    pass

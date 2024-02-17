@@ -1,14 +1,15 @@
 import PySimpleGUI as sg
-from PIL import Image
 from organizadorreceitabx import OrganizadorReceitaBX 
+from pathlib import Path
 
 sg.theme('Default')
 fonte = 'Roboto'
+imgs = Path(__file__).parent
 
 layout = [
     [sg.Text(text=f'{' '*50}Organizador ReceitaNetBX', font='Roboto 12 bold', pad=7)],
     [sg.Text('Pasta c/ arquivos: ', font='Roboto 10'), sg.Input(key='-FOLDER-', enable_events=True), sg.FolderBrowse(f'Buscar', font=f'{fonte} 10', size=(14,1))
-    ,sg.Image(r'.\\.images\\img.png', pad=((0,0),(0,0)))],
+    ,sg.Image(f'{imgs}\\img.png', pad=((0,0),(0,0)))],
     [],
     [sg.Text(text=f'{' '*65}Diretórios', font='Roboto 12 bold', pad=7)],
     [sg.Text(text='ESOCIAL'), sg.Checkbox(text='', key='-ESOCIAL-', default=True), sg.Text(text='SPED ECD'), sg.Checkbox(text='', key='-SPEDECD-', default=True),
