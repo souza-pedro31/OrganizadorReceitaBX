@@ -28,7 +28,7 @@ Este repositório foi projetado com simplicidade em mente. Seguir estes passos s
 
  - No diretório principal do projeto, você encontrará o script necessário para a organização dos arquivos. Faça o download do script para o seu ambiente local.
 
-   2. **Instale as Dependências:**
+2. **Instale as Dependências:**
 
  - Antes de executar o script, certifique-se de instalar todas as dependências necessárias e o módulo autoral "organizadorreceitabx.py". Você pode fazer isso executando o seguinte comando no terminal:
 ```
