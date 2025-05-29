@@ -1,5 +1,5 @@
 import os
-
+from shutil import move
 class OrganizadorReceitaBX:
     def __init__(self, caminho: str) -> None:
         self.__caminho = caminho
@@ -58,29 +58,49 @@ class OrganizadorReceitaBX:
                     checagem_esocial: bool = True) -> None:
     
         if not checagem_sped_contabil and dir_ecd:
-            os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Contábil')}"')
+            os.mkdir(os.path.join(self.__caminho, 'SPED Contábil'))
+            # os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Contábil')}"')
         if not checagem_sped_contribuicoes and dir_contribuicoes:
-            os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Contribuições')}"')
+            os.mkdir(os.path.join(self.__caminho, 'SPED Contribuições'))
+            # os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Contribuições')}"')
         if not checagem_sped_ecf and dir_ecf:
-            os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED ECF')}"')
+            os.mkdir(os.path.join(self.__caminho, 'SPED ECF'))
+            # os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED ECF')}"')
         if not checagem_sped_fiscal and dir_efd:
-            os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Fiscal')}"')
+            os.mkdir(os.path.join(self.__caminho, 'SPED Fiscal'))
+            # os.system(f'mkdir "{os.path.join(self.__caminho, 'SPED Fiscal')}"')
         if not checagem_esocial and dir_esocial:
-            os.system(f'mkdir "{os.path.join(self.__caminho, 'ESOCIAL')}"')  
+            os.mkdir(os.path.join(self.__caminho, 'ESOCIAL'))
+            # os.system(f'mkdir "{os.path.join(self.__caminho, 'ESOCIAL')}"')  
         return
     
 
     def organizar_arquivos(self) -> None:
         for arquivoEFD in self.__sped_EFD:
-            os.system(f'move "{os.path.join(self.__caminho, arquivoEFD)}" "{os.path.join(self.__caminho, 'SPED Fiscal')}"')
+            caminho_antigo = os.path.join(self.__caminho, arquivoEFD)
+            caminho_novo = os.path.join(self.__caminho, 'SPED Fiscal')
+            move(caminho_antigo, caminho_novo)
+            # os.system(f'move "{os.path.join(self.__caminho, arquivoEFD)}" "{os.path.join(self.__caminho, 'SPED Fiscal')}"')
         for arquivoPisCofins in self.__sped_PisCofins:
-            os.system(f'move "{os.path.join(self.__caminho, arquivoPisCofins)}" "{os.path.join(self.__caminho, 'SPED Contribuições')}"')
+            caminho_antigo = os.path.join(self.__caminho, arquivoPisCofins)
+            caminho_novo = os.path.join(self.__caminho, 'SPED Contribuições')
+            move(caminho_antigo, caminho_novo)
+            # os.system(f'move "{os.path.join(self.__caminho, arquivoPisCofins)}" "{os.path.join(self.__caminho, 'SPED Contribuições')}"')
         for arquivoECF in self.__sped_ECF:
-            os.system(f'move "{os.path.join(self.__caminho, arquivoECF)}" "{os.path.join(self.__caminho, 'SPED ECF')}"')
+            caminho_antigo = os.path.join(self.__caminho, arquivoECF)
+            caminho_novo = os.path.join(self.__caminho, 'SPED ECF')
+            move(caminho_antigo, caminho_novo)            
+            # os.system(f'move "{os.path.join(self.__caminho, arquivoECF)}" "{os.path.join(self.__caminho, 'SPED ECF')}"')
         for arquivoECD in self.__sped_ECD:
-            os.system(f'move "{os.path.join(self.__caminho, arquivoECD)}" "{os.path.join(self.__caminho, 'SPED Contábil')}"')
+            caminho_antigo = os.path.join(self.__caminho, arquivoECD)
+            caminho_novo = os.path.join(self.__caminho, 'SPED Contábil')
+            move(caminho_antigo, caminho_novo)
+            # os.system(f'move "{os.path.join(self.__caminho, arquivoECD)}" "{os.path.join(self.__caminho, 'SPED Contábil')}"')
         for arquivoEsocial in self.__esocial:
-            os.system(f'move "{os.path.join(self.__caminho, arquivoEsocial)}" "{os.path.join(self.__caminho, 'ESOCIAL')}"')
+            caminho_antigo = os.path.join(self.__caminho, arquivoEsocial)
+            caminho_novo = os.path.join(self.__caminho, 'ESOCIAL')
+            move(caminho_antigo, caminho_novo)
+            # os.system(f'move "{os.path.join(self.__caminho, arquivoEsocial)}" "{os.path.join(self.__caminho, 'ESOCIAL')}"')
         return
     
     @property
@@ -89,4 +109,10 @@ class OrganizadorReceitaBX:
 
 
 if __name__ == '__main__':
-    pass
+    caminho = str(input('Insira o caminho completo da pasta dos seus arquivos: '))
+    org = OrganizadorReceitaBX(caminho)
+    categorizar = org.categorizar_arquivos()
+    checagem_diretorios = org.checar_diretorios()
+    criacao_diretorios = org.criar_diretorios(*checagem_diretorios) 
+    org.organizar_arquivos()
+    registro_erros = org.registrar_erros() 

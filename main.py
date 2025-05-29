@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 from organizadorreceitabx import OrganizadorReceitaBX 
 from pathlib import Path
 
@@ -15,7 +15,7 @@ layout = [
     [sg.Text(text='ESOCIAL'), sg.Checkbox(text='', key='-ESOCIAL-', default=True), sg.Text(text='SPED ECD'), sg.Checkbox(text='', key='-SPEDECD-', default=True),
     sg.Text(text='SPED Contribuições'), sg.Checkbox(text='', key='-SPEDCONTRIBUICOES-', default=True), sg.Text(text='SPED ECF'), sg.Checkbox(text='', key='-SPEDECF-', default=True),
     sg.Text(text='SPED EFD'), sg.Checkbox(text='', key='-SPEDEFD-', default=True)],
-    [sg.Text(text=f'Versão 1.0{' '*142}Github: souza-pedro31', font=f'{fonte} 8 bold')]
+    [sg.Text(text=f'Versão 1.1{' '*142}Github: souza-pedro31', font=f'{fonte} 8 bold')]
     ]
 
 sg.popup_ok('Os seguintes diretórios serão criados:\n\n- ESOCIAL\n- SPED ECD\n- SPED Contribuições\n- SPED ECF\n- SPED EFD\n\n( Desmarque os que você não precisa )', title='Popup início', font=(f'{fonte} 12'))

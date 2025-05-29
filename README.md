@@ -60,7 +60,8 @@ Se seguiu todos os passos corretamente é provável que agora seus arquivos este
 
 Nesse projeto usei a IDE da Microsoft, o Visual Studio Code com o compilador Python e a biblioteca pysimplegui.
 
-* [Pysimplegui](https://www.pysimplegui.com/) - Biblioteca usada
+* ~~[Pysimplegui](https://www.pysimplegui.com/) - Biblioteca usada~~
+* [Freesimplegui](https://github.com/spyoungtech/FreeSimpleGUI) - Biblioteca usada
 * [Visual Studio Code](https://code.visualstudio.com/) - IDE
 * [Compilador Python](https://www.python.org/downloads/) - Python
 
@@ -70,7 +71,8 @@ Projeto autoral feito por mim para atender a minha necessidade. Sinta-se a vonta
 
 ## 📌 Versão
 
-O projeto está na sua primeira versão.
+~~O projeto está na sua primeira versão.~~
+O projeto chegou a um novo patamar, com novas funcionalidades para organização de XMLs e uma nova dependencia para a interface. Agora é possível usar o organizador via CLI.
 
 ## ✒️ Autores
 
