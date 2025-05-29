@@ -1,24 +1,26 @@
 import FreeSimpleGUI as sg
 from organizadorreceitabx import OrganizadorReceitaBX 
-
+from pathlib import Path
 
 class InterfaceOrganizadorReceitaBX:
-    def __init__(self) -> None:
+    def __init__(self):
         return
 
     def interface(self):
         sg.theme('Default')
         fonte = 'Roboto'
+        imgs = Path(__file__).parent
 
         layout = [
             [sg.Text(text=f'{' '*50}Organizador ReceitaNetBX', font='Roboto 12 bold', pad=7)],
             [sg.Text('Pasta c/ arquivos: ', font='Roboto 10'), sg.Input(key='-FOLDER-', enable_events=True), sg.FolderBrowse(f'Buscar', font=f'{fonte} 10', size=(14,1))
-            ,sg.Image(r'.\\.images\\img.png', pad=((0,0),(0,0)))],
+            ,sg.Image(f'{imgs}\\img.png', pad=((0,0),(0,0)))],
+            [],
             [sg.Text(text=f'{' '*65}Diretórios', font='Roboto 12 bold', pad=7)],
             [sg.Text(text='ESOCIAL'), sg.Checkbox(text='', key='-ESOCIAL-', default=True), sg.Text(text='SPED ECD'), sg.Checkbox(text='', key='-SPEDECD-', default=True),
             sg.Text(text='SPED Contribuições'), sg.Checkbox(text='', key='-SPEDCONTRIBUICOES-', default=True), sg.Text(text='SPED ECF'), sg.Checkbox(text='', key='-SPEDECF-', default=True),
             sg.Text(text='SPED EFD'), sg.Checkbox(text='', key='-SPEDEFD-', default=True)],
-            [sg.Text(text=f'Versão 1.0{' '*142}Github: souza-pedro31', font=f'{fonte} 8 bold')]
+            [sg.Text(text=f'Versão 1.1{' '*142}Github: souza-pedro31', font=f'{fonte} 8 bold')]
             ]
 
         sg.popup_ok('Os seguintes diretórios serão criados:\n\n- ESOCIAL\n- SPED ECD\n- SPED Contribuições\n- SPED ECF\n- SPED EFD\n\n( Desmarque os que você não precisa )', title='Popup início', font=(f'{fonte} 12'))
@@ -29,9 +31,8 @@ class InterfaceOrganizadorReceitaBX:
             if event == sg.WIN_CLOSED:
                 break
 
-            if event == '-FOLDER-':
+            elif event == '-FOLDER-':
                 caminho = value['-FOLDER-']
-                window['-FOLDER-'].update(caminho)
                 org = OrganizadorReceitaBX(caminho)
                 dir_esocial = value['-ESOCIAL-']
                 dir_ecd = value['-SPEDECD-']
@@ -51,9 +52,6 @@ class InterfaceOrganizadorReceitaBX:
                 except Exception as e:
                     sg.popup_ok('Erro: ', e, title='Popup erro', font=(f'{fonte} 12'))
                 window['-FOLDER-'].update('')
+                break
                 
-
-
-if __name__ =='__main__':
-    interface = InterfaceOrganizadorReceitaBX()
-    interface.interface()
+                
