@@ -12,10 +12,11 @@ A ideia para esse projeto surgiu quando vi o tempo que demandava para organizar 
 
 ### 📋 Pré-requisitos
 
-É interessante que você tenha uma IDE para fazer alterações no código Python. O código utiliza as bibliotecas Pysimplegui, você pode instalar via CLI
+É interessante que você tenha uma IDE para fazer alterações no código Python. O código utiliza as bibliotecas ~~Pysimplegui~~ Freesimplegui, você pode instalar via CLI
 
 ```
-pip install pysimplegui
+~~pip install pysimplegui~~
+pip install freesimplegui
 ```
 
 ### 🔧 Instalação
